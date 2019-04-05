@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import EnterForm from "./components/EnterForm";
+import {withRouter} from "react-router";
+import {CSSTransition} from "react-transition-group";
+import {Registration} from "./components/FormThings";
+import {RegisterForm} from "./components/RegisterForm";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+class AppRegistration extends Component {
+    constructor(props) {
+        super(props);
+        if (!localStorage.getItem('data')) {
+            localStorage.setItem('data', JSON.stringify({}));
+        }
+        this.state = {
+            registration: false
+        }
+    }
+    render() {
+        return (
+            <div className="App">
+                    <EnterForm user={this.props.match.params.id} open={() => this.setState({registration: true})}/>
+                    <Registration on={this.state.registration}
+                              regOff={()=>this.setState({registration: false})}
+                              Form={RegisterForm}
+                              user={this.props.user}/>
+            </div>
+        );
+    }
 }
 
-export default App;
+export default withRouter(AppRegistration);

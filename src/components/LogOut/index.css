@@ -1,0 +1,8 @@
+.LogOut {
+    background-image: url("../../images/exit.png");
+    background-size: cover;
+    height: 4vh;
+    width: 4vh;
+    margin: 0.5vh;
+    cursor: pointer;
+}

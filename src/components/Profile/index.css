@@ -1,0 +1,25 @@
+.Profile {
+    display: flex;
+    margin: 0.5vh;
+    padding: 0.25vh;
+    border: 1px solid #ecb2ff;
+    border-radius: 10px;
+    box-shadow: black 1px 1px 1px;
+    cursor: pointer;
+}
+
+.Profile-text {
+    //color: #bc13ff;
+    font: italic 3vh sans-serif;
+    //text-shadow: #000000 1px 1px 1px;
+    background: -webkit-linear-gradient(#c74eee, #1a56cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Profile-img {
+    background-image: url("../../images/profile.png");
+    background-size: cover;
+    height: 4vh;
+    width: 4vh;
+}

@@ -1,0 +1,11 @@
+.Info {
+    position: relative;
+    width: 50%;
+    top: 20vh;
+    background-color: #ff7672;
+    color: white;
+    border: 2px solid #ffb7b7;
+    font: italic 7vh sans;
+    border-radius: 10% 10% 20% 20%;
+    padding: 2vh 2vh 4vh 2vh;
+}

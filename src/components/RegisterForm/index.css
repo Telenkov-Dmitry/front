@@ -1,0 +1,52 @@
+
+
+.Form-handler {
+    display: block;
+    position: fixed;
+    width: 25vw;
+    top: 3vh;
+    left: -40vw;
+    z-index: 10;
+}
+.Register-form {
+    position: relative;
+    background-color: #ff7672;
+    width: 25vw;
+    margin: 10vh 0 0 0;
+    border: 1px solid #ffb7b7;
+    border-radius: 15px;
+    z-index: 15;
+}
+
+
+.Register-form-enter {
+    left: -30vw;
+}
+
+.Register-form-enter-done {
+    left: 37.5vw;
+    transition: ease-in-out 0.5s;
+}
+
+.Register-form-exit {
+    left: 37.5vw;
+}
+
+.Register-form-exit-done {
+    left: -30vw;
+    transition: ease-in-out 0.5s;
+}
+
+.Input-and-error {
+    background-color: #ffad7f;
+    width: 70%;
+    border-style: none none solid;
+    border-bottom-width: 1px;
+    margin: 1vh 0px;
+    padding: 1vh;
+    text-align: left;
+    font: calc(10px + 1vh) sans-serif;
+    color: white;
+    box-shadow: #ffffffa8 1px -1px 1px;
+    outline: none;
+}

@@ -1,0 +1,183 @@
+
+.Form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vh;
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.Enter {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    width: 95%;
+}
+
+.Enter-text {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    padding: 0 4px;
+    background-color: #ff7672;
+    color: white;
+    font: calc(10px + 2vh) serif;
+    text-shadow: rgba(3, 0, 180, 0.67) 1px 0px 1px;
+    z-index: 3;
+}
+
+.Line {
+    position: relative;
+    top: calc(-5px - 1vh);
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgba(239, 0, 255, 0.67) 30%, #4490f3 100%);
+    z-index: 2;
+}
+
+.Form-button {
+    width: 50%;
+    background: linear-gradient(to right, rgba(239, 0, 255, 0.67) 30%, #4490f3 100%);
+    border: 1px solid;
+    border-radius: 10px;
+    margin-top: 0vh;
+    margin-bottom: 0.5vh;
+    padding: 1vh;
+    text-align: center;
+    font: calc(10px + 1vh) sans-serif;
+    color: white;
+    outline: none;
+    transition-duration: 0.15s;
+}
+
+.Form-button:hover {
+    box-shadow: white 2px 0px 3px, white -2px 0px 3px;
+    cursor: pointer;
+}
+
+.Black-nothingness-holder {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.Black-nothingness-holder-enter {
+    visibility: hidden;
+}
+
+.Black-nothingness-holder-enter-done {
+    visibility: visible;
+}
+
+.Black-nothingness-holder-exit {
+    visibility: visible;
+}
+
+.Black-nothingness-holder-exit-done {
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+
+.Black-nothingness {
+    position: relative;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+}
+
+.Black-nothingness-enter {
+    background-color: rgba(36, 0, 139, 0);
+}
+
+.Black-nothingness-enter-done {
+    background-color: rgba(36, 0, 139, 0.3);
+    transition: ease-in-out 0.5s;
+}
+
+.Black-nothingness-exit {
+    background-color: rgba(36, 0, 139, 0.3);
+}
+
+.Black-nothingness-exit-done {
+    background-color: rgba(36, 0, 139, 0);
+    visibility: hidden;
+    transition: ease-in-out 0.4s;
+}
+
+.Error {
+    min-height: 1.5vh;
+    margin: -0.8vh 11% 0 11%;
+    text-align: left;
+    color: red;
+    font:  italic 1.2vh sans-serif;
+    text-shadow: 1px 1px 1px #4e0400;
+}
+
+.Success {
+    visibility: hidden;
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    padding: 0.5vh;
+    width: 50%;
+    min-height: 6vh;
+    box-shadow: #65ff71c7 1px 1px 1px;
+    border-radius: 0 0 50% 50%;
+    color: white;
+    font:  italic 1.5vh sans;
+    background: linear-gradient(to right, rgba(15, 255, 0, 0.73) 30%, rgba(177, 243, 0, 0.73) 100%);
+}
+
+.Failure {
+    visibility: hidden;
+    position: relative;
+    z-index: 0;
+    margin: 0 25%;
+    padding: 0.5vh;
+    width: 50%;
+    min-height: 6vh;
+    border-radius: 0 0 50% 50%;
+    color: white;
+    font:  italic 1.5vh sans;
+    box-shadow: #ff6565c7 1px 1px 1px;
+    background: linear-gradient(to right, rgb(255, 0, 0) 30%, rgb(210, 0, 0) 100%);
+}
+
+.Attention-enter {
+    visibility: visible;
+    bottom: 7vh;
+    transition: ease-in-out 0.5s;
+}
+
+.Attention-enter-active {
+    bottom: 0vh;
+    transition: ease-in-out 0.5s;
+}
+
+.Attention-enter-done {
+    visibility: hidden;
+    bottom: 7vh;
+    transition: ease-in-out 0.5s;
+}
+
+.Attention-exit {
+    visibility: visible;
+    bottom: 7vh;
+}
+
+.Attention-exit-active {
+    bottom: 0vh;
+    transition: ease-in-out 0.5s;
+}
+
+.Attention-exit-done {
+    visibility: hidden;
+    bottom: 7vh;
+    transition: ease-in-out 0.5s;
+}
