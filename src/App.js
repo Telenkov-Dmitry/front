@@ -5,6 +5,7 @@ import {withRouter} from "react-router";
 import {CSSTransition} from "react-transition-group";
 import {Registration} from "./components/FormThings";
 import {RegisterForm} from "./components/RegisterForm";
+import {logOutTime, pingTime} from "./constants";
 
 class AppRegistration extends Component {
     constructor(props) {
@@ -15,6 +16,14 @@ class AppRegistration extends Component {
         this.state = {
             registration: false
         }
+    }
+    componentDidMount() {
+        let lastLog = JSON.parse(localStorage.getItem('lastLog'));
+        console.log(lastLog);
+        if ((Date.now() - lastLog[1]) / 60000 < logOutTime) {
+            console.log('Already logged')
+            this.props.history.push(`/${lastLog[0]}`);
+        } 
     }
     render() {
         return (

@@ -1,3 +1,3 @@
 
-export const logOutTime = 1;
-export const pingTime = 15;
+export const logOutTime = 30;
+export const pingTime = 5;
